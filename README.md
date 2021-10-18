@@ -7,7 +7,7 @@
 4. Wait for results. 
 
 # To know 
-- The <font color="#FF0000">red</font> color means that it is not valid, and the <font color="#00CC00">green</font> color means that it is valid.
+- The <span style="color: ##FF0000">red</span> color means that it is not valid, and the <span style="color: #00CC00">green</span> color means that it is valid.
 - When it reaches the end, it will show you how many valid tokens have been found.
 
 # Image
