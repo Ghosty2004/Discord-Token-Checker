@@ -4,20 +4,13 @@ require("colors");
 
 const token = {
     Validate: function(token) {
-        return new Promise(async (resolve, reject) => {
+        return new Promise((resolve, reject) => {
             axios.default.post(`https://discord.com/api/v6/invite/${getRandomInt(1, 9999999)}`, {}, {
                 headers: { 
                     "Authorization": token 
                 }
-            }).then((response) => {
-                if(response.data.message == "401: Unauthorized") {
-                    resolve(false);
-                }
-                else {
-                    resolve(true);
-                }
-            }).catch((error) => {
-                if(error.response.data.message == "401: Unauthorized") {
+            }).catch((result) => { 
+                if(result.response.data.message == "401: Unauthorized") {
                     resolve(false);
                 }
                 else {
