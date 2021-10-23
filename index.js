@@ -10,7 +10,7 @@ const token = {
                     "Authorization": token 
                 }
             }).catch((result) => { 
-                if(result.response.data.message == "401: Unauthorized") {
+                if(result.response.data.message == "401: Unauthorized" || result.response.data.message == "You need to verify your account in order to perform this action.") {
                     resolve(false);
                 }
                 else {
